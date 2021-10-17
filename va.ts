@@ -26,7 +26,7 @@ class Main{
         const client = await MongoClient.connect(url);
         const db = client.db('vamshi');
 
-        const output = await db.collection('task').updateOne({todo:'HELLO MONGO'},{$set:{todo: "CHARAN"}});
+        const output = await db.collection('task').updateOne({todo:'HELLO MONGO'},{$set:{todo: "VAMSHI"}});
         console.log(output);
         client.close();
     }
