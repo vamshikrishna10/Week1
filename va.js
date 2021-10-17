@@ -50,20 +50,16 @@ var Main = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         url = 'mongodb://localhost://27017';
-                        return [4 /*yield*/, mongodb_1.MongoClient.connect(url)];
+                        return [4, mongodb_1.MongoClient.connect(url)];
                     case 1:
                         client = _a.sent();
                         db = client.db('vamshi');
-                        return [4 /*yield*/, db.collection('task').find().toArray()];
+                        return [4, db.collection('task').find().toArray()];
                     case 2:
                         docs = _a.sent();
-                        /*for (let i=0;i<docs.length;i++){
-                            let item = docs[i];
-                            console.log(item);
-                        }*/
                         docs.forEach(function (item) { return console.log(item); });
                         client.close();
-                        return [2 /*return*/];
+                        return [2];
                 }
             });
         });
@@ -75,16 +71,16 @@ var Main = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         url = 'mongodb://localhost://27017';
-                        return [4 /*yield*/, mongodb_1.MongoClient.connect(url)];
+                        return [4, mongodb_1.MongoClient.connect(url)];
                     case 1:
                         client = _a.sent();
                         db = client.db('vamshi');
-                        return [4 /*yield*/, db.collection('task').deleteMany({ todo: 'HELLO MONGO' })];
+                        return [4 , db.collection('task').deleteMany({ todo: 'HELLO MONGO' })];
                     case 2:
                         output = _a.sent();
                         console.log(output);
                         client.close();
-                        return [2 /*return*/];
+                        return [2];
                 }
             });
         });
@@ -100,7 +96,7 @@ var Main = /** @class */ (function () {
                     case 1:
                         client = _a.sent();
                         db = client.db('vamshi');
-                        return [4 /*yield*/, db.collection('task').updateOne({ todo: 'HELLO MONGO' }, { $set: { todo: "CHARAN" } })];
+                        return [4 /*yield*/, db.collection('task').updateOne({ todo: 'HELLO MONGO' }, { $set: { todo: "VAMSHI" } })];
                     case 2:
                         output = _a.sent();
                         console.log(output);
